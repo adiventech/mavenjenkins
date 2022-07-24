@@ -9,7 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class UITest 
+public class UITest
 {
 
 	@Parameters("Browser")
@@ -18,7 +18,7 @@ public class UITest
 	{
 		System.out.println("Parameter value is "+browserName);
 		WebDriver driver=null;
-		
+		// condition to select browser 
 		if(browserName.contains("Chrome"))
 		{
 			WebDriverManager.chromedriver().setup();
@@ -38,6 +38,6 @@ public class UITest
 		Assert.assertTrue(driver.getTitle().contains("Orange"), "Title does not match");
 		driver.quit();
 	}
-	
-	
+
+
 }
